@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <body>
+        <h1>Add User Story</h1>
+        <a href = "/">back to Story List</a><br><br>
+
+        <form action="/story" method="POST">
+
+            <label for="title">Story Title:</label><br>
+            <input id="title" name="title" type="text" size="40" placeholder="story title"><br>
+
+            <label for="user_story">User Story:</label><br>
+            <textarea id = "user_story" name = "user_story" placeholder="user story" rows = "5", cols = "40"></textarea><br>
+
+            <label for="acceptance_criteria">Acceptance Criteria:</label><br>
+            <textarea id = "acceptance_criteria" name = "acceptance_criteria" placeholder="acceptance criteria" rows = "10", cols = "40"></textarea><br>
+
+            <label for="business_value">Business value:</label><br>
+            <input id="business_value" name="business_value" type="text" size="20" placeholder="no.points"><br>
+
+            <label for="estimation">Estimation:</label><br>
+            <input id="estimation" name="estimation" type="text" size="10" placeholder="no. hours"><br>
+
+            <button type = submit>Add new User Story</button>
+        </form>
+
+    </body>
+    </html>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<body>
+    <h1>Update User Story</h1>
+
+    <a href="/">back to Story List</a><br><br>
+
+    <form action="/story/{{id}}" method="POST">
+
+        <label for="title">Story Title:</label><br>
+        <input id="title" name="title" type="text" size="40" value="{{ data['title'] }}"><br><br>
+
+        <label for="user_story">User Story:</label><br>
+        <textarea id="user_story" name="user_story" rows="5" cols="40">{{ data['user_story'] }}</textarea><br><br>
+
+        <label for="acceptance_criteria">Acceptance Criteria:</label><br>
+        <textarea id="acceptance_criteria" name="acceptance_criteria" rows="10"
+            cols="40">{{ data['acceptance_criteria'] }}</textarea><br><br>
+
+        <label for="business_value">Business value:</label><br>
+        <input id="business_value" name="business_value" type="text" size="20"
+            value="{{ data['business_value'] }}"><br><br>
+
+        <label for="estimation">Estimation:</label><br>
+        <input id="estimation" name="estimation" type="text" size="10" value="{{ data['estimation'] }}"><br><br>
+
+        <label for="status">Status:</label><br>
+        <select id="status" name="status">
+            <option value="planning">planning</option>
+            <option value="todo">todo</option>
+            <option value="in progress">in progress</option>
+            <option value="review">review</option>
+            <option value="done">done</option>
+        </select><br><br><br>
+
+        <button type="submit">Update User Story</button>
+    </form>
+
+</body>
+
+</html>
+{% endblock %}

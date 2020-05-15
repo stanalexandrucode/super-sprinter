@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>Super Sprinter 3000</h1>
+    <a href = "/story">Add new story</a>
+
+    <table>
+        <thead>
+            <tr>
+                <td><h3>Id</h3></td>
+                <td><h3>Story Title</h3></td>
+                <td><h3>User Story</h3></td>
+                <td><h3>Acceptance Criteria</h3></td>
+                <td><h3>Business Value</h3></td>
+                <td><h3>Estimation</h3></td>
+                <td><h3>Status</h3></td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for my_data in data %}
+            <tr>
+                <td>
+                    {{ my_data['id'] }}
+                </td>
+                <td>
+                    <a href="/story/{{ my_data['id'] }}">{{ my_data['title'] }}</a>
+                </td>
+                <td>
+                    {{ my_data['user_story'] }}
+                </td>
+                <td>
+                    {{ my_data['acceptance_criteria'] }}
+                </td>
+                <td>
+                    {{ my_data['business_value'] }}
+                </td>
+                <td>
+                    {{ my_data['estimation'] }}
+                </td>
+                <td>
+                    {{ my_data['status'] }}
+                </td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+
+{% endblock %}

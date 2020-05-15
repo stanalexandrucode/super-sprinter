@@ -1,0 +1,6 @@
+id,title,user_story,acceptance_criteria,business_value,estimation,status
+1,Alice in Wonderland,Alice falls into the Wonderland,"Alice has to be a female character,
+the Hatter is mad and the Rabbit drinks tea ",500 points,6h,planning
+2,The Capra cu trei iezi,One goat and 3 Kids,"The wolf dies
+and the goat gets revenge",300 points,3h,review
+3,The bear tricked by the fox,The bear loses his tail,The bear and the fox must know how to speak,300 points,2h,done
